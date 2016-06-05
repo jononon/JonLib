@@ -13,3 +13,7 @@ int max(int num1, int num2) {
 	else
 		return num2;
 }
+
+int limit (int num, int limit) {
+	return sgn(num)*(abs(num)>limit?limit:abs(num));
+}
