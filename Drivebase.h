@@ -29,3 +29,7 @@ void timeDrive(int speed, int time, bool stop) {
 	if(stop)
 		setWheelSpeed(0);
 }
+
+void tankDrive(int leftPower, int rightPower, int deadbands) {
+	setWheelSpeed(leftPower<deadbands?0:leftPower,rightPower<deadbands?0:rightPower);
+}
